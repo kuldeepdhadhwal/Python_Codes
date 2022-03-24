@@ -12,7 +12,7 @@ def openLogger(path):
     return file
 
 # calling logger
-file = openLogger('/home/kuldeep/Documents/CAE/first.txt')
+file = openLogger('/home/kuldeep/Documents/test/first.txt')
 
 def add(file):
     t = get_timestamp()
