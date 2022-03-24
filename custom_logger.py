@@ -22,6 +22,19 @@ def add(file):
     t = get_timestamp()
     file.write(str(t)+  " " + "End the function" + "\n")
     
+def read_from_warehouse(opt,arg,file):
+    try:
+        t = get_timestamp()
+        file.write(str(t) + " " + "entered into read from warehouse function" +"\n")
+        df_record_count = spark.read.csv(org)
+        file.write(str(t) + " "+ str(df_record_count.count()) + "\n")
+        file.write(str(t) + " " + "Exit from read from warehouse function" +"\n")
+        return df_record_count
+    except Exception as e:
+        t = get_timestamp()
+        file.write(str(t)+  " " + str(e) + "\n")
+        print(e)
+        
 def closeLogger(file):
     file.close()
     
