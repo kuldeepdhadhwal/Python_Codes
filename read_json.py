@@ -12,4 +12,7 @@ def read_json(path):
             result["name"] = [line["name"]]        
     return result
 
+def create_dataframe(data):
+    return pd.DataFrame(df)
+
 output = read_json('/home/x/Documents/Template.json')
