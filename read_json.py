@@ -1,3 +1,4 @@
+import pandas as pd
 # reading json file and storing names in dict
 def read_json(path):
     import json
@@ -16,3 +17,5 @@ def create_dataframe(data):
     return pd.DataFrame(df)
 
 output = read_json('/home/x/Documents/Template.json')
+data = create_dataframe(output)
+display(data)
